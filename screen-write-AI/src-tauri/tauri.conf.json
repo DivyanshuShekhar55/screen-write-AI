@@ -14,7 +14,8 @@
       {
         "title": "screen-write-ai",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "transparent": true
         
       }
     ],
