@@ -1,10 +1,11 @@
 import React from 'react'
 import './App.css'
+import Sidebar from './components/Sidebar'
 
 function App() {
   return (
-    <div className='p-8'>
-      <h1 className='text-red-600' >Hello World</h1>
+    <div className='p-8 static'>
+      <Sidebar/>
     </div>
   )
 }
