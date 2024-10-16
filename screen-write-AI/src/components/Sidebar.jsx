@@ -58,7 +58,7 @@ const icons = [
 
 function Sidebar() {
     return (
-        <div className='absolute top-1/4 right-8 justify-center '>
+        <div className='absolute top-12 right-8 justify-center'>
             <div className='flex flex-col gap-5'>
                 {icons.map(({ icon, text }) => (
                     <SidebarButton icon={icon} text={text} />

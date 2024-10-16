@@ -13,9 +13,10 @@
     "windows": [
       {
         "title": "screen-write-ai",
-        "width": 800,
-        "height": 600,
-        "transparent": true
+        "width": 125,
+        "height": 450,
+        "transparent": true,
+        "decorations": false
         
       }
     ],
