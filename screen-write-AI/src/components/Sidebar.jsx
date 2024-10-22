@@ -56,10 +56,10 @@ const icons = [
 
 ]
 
-function Sidebar() {
+function Sidebar({changeMode}) {
     return (
         <div className='absolute top-12 right-8 justify-center'>
-            <div className='flex flex-col gap-5'>
+            <div className='flex flex-col gap-5' onClick={changeMode} >
                 {icons.map(({ icon, text }) => (
                     <SidebarButton icon={icon} text={text} />
                 ))}

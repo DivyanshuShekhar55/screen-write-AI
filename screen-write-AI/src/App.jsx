@@ -4,11 +4,12 @@ import Sidebar from './components/Sidebar';
 import Canvas from './components/Canvas'
 
 function App() {
+  const [isvanishModeActive, setIsvanishModeActive] = useState(true)
 
   return (
     <div className="p-8 static">
-      <Sidebar />
-      <Canvas />
+      <Sidebar changeMode={() => setIsvanishModeActive(!isvanishModeActive)} />
+      <Canvas VanishMode={isvanishModeActive} />
     </div>
   );
 }

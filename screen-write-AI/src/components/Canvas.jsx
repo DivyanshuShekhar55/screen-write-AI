@@ -1,7 +1,10 @@
-import React, {useState, useRef, useEffect}from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
-function Canvas() {
-    const VANISH_TIME = 3500
+function Canvas({ VanishMode }) {
+    const VANISH_TIME = VanishMode ? 3500 : Infinity
+    // REFACTOR : NOT SURE IF MOST OPTIMAL WAY
+    const CHECK_EXPIRE_DURATION = 750; // ms
+
     const canvasRef = useRef(null);
     const ctxRef = useRef(null);
     const [isDrawing, setIsDrawing] = useState(false);
@@ -16,12 +19,14 @@ function Canvas() {
         ctxRef.current = ctx;
     }, []);
 
+
     useEffect(() => {
         const interval = setInterval(() => {
             if (isDrawing) return;
 
             setShapes((prevShapes) => {
                 const currentTime = Date.now();
+
                 const remainingShapes = prevShapes.filter(
                     (shape) => currentTime - shape.timestamp < VANISH_TIME
                 );
@@ -33,10 +38,11 @@ function Canvas() {
 
                 return remainingShapes;
             });
-        }, 1000);
+        }, CHECK_EXPIRE_DURATION);
 
         return () => clearInterval(interval);
     }, [isDrawing]);
+
 
     const setCanvasProperties = (ctx) => {
         ctx.lineCap = "round";
