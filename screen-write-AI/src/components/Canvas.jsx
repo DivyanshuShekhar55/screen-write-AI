@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react'
 function Canvas({ VanishMode }) {
     const VANISH_TIME = VanishMode ? 3500 : Infinity
     // REFACTOR : NOT SURE IF MOST OPTIMAL WAY
-    const CHECK_EXPIRE_DURATION = 750; // ms
+    const CHECK_EXPIRE_DURATION = 550; // ms
 
     const canvasRef = useRef(null);
     const ctxRef = useRef(null);
