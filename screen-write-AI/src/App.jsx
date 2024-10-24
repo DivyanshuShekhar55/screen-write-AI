@@ -3,7 +3,6 @@ import './App.css';
 import Sidebar from './components/Sidebar';
 import Canvas from './components/Canvas'
 import ChatWindow from './components/ChatWindow';
-import MainLayout from './components/MainLayout';
 
 function App() {
   const [isvanishModeActive, setIsvanishModeActive] = useState(true)
