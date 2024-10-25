@@ -9,7 +9,7 @@ const msgArray = [
 
 function AItextBar() {
     return (
-        <div className='w-full h-full rounded-3xl border-[1px] border-gray-400 flex gap-x-4 items-center px-4 justify-between'>
+        <div className='w-full h-full rounded-3xl border-[1px] border-gray-400 flex gap-x-4 items-center px-4 justify-between py-2'>
 
             <div className='border-r-[2px] border-r-gray-400 flex gap-x-4 pr-4'>
 
