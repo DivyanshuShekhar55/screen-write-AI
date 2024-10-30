@@ -52,7 +52,7 @@ function AItextBar({ messageList, setMessageList }) {
                 type: 'ai',
                 name: 'Cosima AI',
                 text: response,
-                timestamp: `${new Date().getHours()} : ${new Date().getMinutes()}`,
+                timestamp: `${new Date().getHours()}:${new Date().getMinutes()}`,
                 avatar: '/api/placeholder/32/32'
             }
 
