@@ -3,6 +3,7 @@ import './App.css';
 import Sidebar from './components/Sidebar';
 import Canvas from './components/Canvas'
 import ChatWindow from './components/ChatWindow';
+import ScreenCapture from './components/ScreenCapture';
 
 function App() {
   const [isvanishModeActive, setIsvanishModeActive] = useState(true)
@@ -13,7 +14,8 @@ function App() {
       <Canvas VanishMode={isvanishModeActive} />
       <Sidebar changeMode={() => setIsvanishModeActive(!isvanishModeActive)} />
 
-      <ChatWindow />
+      {/* <ChatWindow /> */}
+      <ScreenCapture />
     </div>
   );
 }
