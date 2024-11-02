@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="p-8 static">
-      <Canvas VanishMode={isvanishModeActive} />
+      {/* <Canvas VanishMode={isvanishModeActive} /> */}
       <Sidebar changeMode={() => setIsvanishModeActive(!isvanishModeActive)} />
 
       {/* <ChatWindow /> */}
