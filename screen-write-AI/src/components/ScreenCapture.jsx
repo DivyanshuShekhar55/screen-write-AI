@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { invoke } from '@tauri-apps/api/core';
 
 function ScreenCapture() {
     const [selectStartPos, setSelectStartPos] = useState({ x: null, y: null })
